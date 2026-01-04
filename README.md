@@ -1,8 +1,8 @@
 ### Quick info before core
 1. If you have other option than Android Studio to run Arknights, skip this project, don't be a masochist
 2. For this to run you need:
-  - Requirements? (not sure if have any impact): Linux Mint (wilma) specifically, Android 14.0 (device version in Android Studio), python-venv global
-  - Requirements: regular color scheme (script works on color recognition, if you have color blind or custom color themes, it will most likely break), Android Studio, working Arknights (login once) (if getting 'out of storage' error when installing, "solution" is in 'Arknights Install' part), python global, Linux, Nvidia GPU (if you have AMD try Waydroid instead), MAA executable (how to get and use it will be discussed in 'MAA Setup' part, if you don't care about MAA, just ignore parts with it and ask ChatGPT to adapt script, just need to delete some parts)
+  - Requirements? (not sure if have any impact): Linux Mint (wilma) specifically, Android 14.0 (device version in Android Studio)
+  - Requirements: regular color scheme (script works on color recognition, if you have color blind or custom color themes, it will most likely break), Android Studio, working Arknights (login once) (if getting 'out of storage' error when installing, "solution" is in 'Arknights Install' part), python, python-venv, pip, Linux, Nvidia GPU (if you have AMD try Waydroid instead), MAA executable (how to get and use it will be discussed in 'MAA Setup' part, if you don't care about MAA, just ignore parts with it and ask ChatGPT to adapt script, just need to delete some parts)
 3. Android emulators already finicky on Linux, playing Arknights on Linux using Android emulator is a total Karen, so even with all the setup it may not work, so no promises
 4. This is not a good solution, just a crutches when nothing else works but you still want to play on PC (and don't want to dual boot), basically "best" out of the worst options
 5. I will not discuss how to install Android Studio, adb or python
@@ -37,8 +37,9 @@ This project is a script that will open emulator, open Arknights, launch it when
 - Daily file does same recruitment, visits friends, collect all base resources and spend drones on Combat Records, then gets credits from daily shop (it doesn't auto assigns operators to dormitories/facilities, doesn't touch clues and doesn't shop/fight, I prefer to do them manually, how to use those options just use url with tasks, but facility assign doesn't use presets)
 # Bind Shortcut
 Now when everything configured (have MAA .toml files, MAA executable, android emulator, Arknights launch atleast once):
-1. Get the script from repo (pull or create .sh file and copy-paste the content, doesn't matter, you only need to have script, other files are change manually)
+1. Get the script and code from repo (pull repo or create .sh/.py/.txt files and copy-paste the content)
 2. Give the autority to run the script (in folder where file is, in terminal run 'chmod +x ./auto_arknights.sh)
-3. In 'auto_arknights.sh' change MAA_PATH to the path of 'maa' executable to where you put it, and the ANDROID_NAME to your android emulator name (if used the same as mine, skip the name change)
-4. Go to Menu -> System Settings -> Keyboard -> Shortcuts -> Custom Shortcuts -> Add custom shortcut -> put in name, choose shortcut keys and give path to the './auto_arknights.sh'
+3. Using 'requirements.txt' create virtual environment, in terminal write 'python3 -m venv .venv', activate it 'source .venv/bin/activate', install libraries 'pip install -r requirements.txt', close it 'deactivate'
+4. In 'auto_arknights.sh' change MAA_PATH to the path of 'maa' executable to where you put it, and the ANDROID_NAME to your android emulator name (if used the same as mine, skip the name change)
+5. Go to Menu -> System Settings -> Keyboard -> Shortcuts -> Custom Shortcuts -> Add custom shortcut -> put in name, choose shortcut keys and give path to the './auto_arknights.sh'
 - For example -> my script in ~/Scripts/ and in ~/.config/maa/tasks/ I have files 'daily.toml' and 'recruit.toml', so I create 2 shortcuts: 1) command - ~/Scripts/auto_arknights.sh daily, keys - CTRL+Super+1 2) command - ~/Scripts/auto_arknights.sh recruit, keys - CTRL+Super+2
