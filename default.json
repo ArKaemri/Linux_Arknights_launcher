@@ -1,0 +1,21 @@
+{
+  "connection": {
+    "adb_path": "adb",
+    "device": "emulator-5554",
+    "preset": "ADB",
+    "config": "General"
+  },
+  "instance_options": {
+    "adb_lite_enabled": false,
+    "deployment_with_pause": false,
+    "kill_adb_on_exit": false,
+    "touch_mode": "MaaTouch"
+  },
+  "resource": {
+    "global_resource": "YoStarEN"
+  },
+  "static_options": {
+    "cpu_ocr": false,
+    "gpu_ocr": 1
+  }
+}

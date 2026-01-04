@@ -1,0 +1,26 @@
+[[tasks]]
+type = "Infrast"
+
+[tasks.params]
+mode = 20000
+facility = ["Reception", "Office", "Control", "Power", "Mfg", "Trade", "Dorm"]
+drones = "CombatRecord"
+dorm_trust_enabled = true
+reception_clue_exchange = false
+reception_message_board = false
+
+[[tasks]]
+type = "Recruit"
+
+[tasks.params]
+refresh = true
+select = [4, 5]
+confirm = [3, 4, 5]
+times = 3
+recruitment_time = { 3 = 460 }
+
+[[tasks]]
+type = "Mall"
+
+[tasks.params]
+shopping = false

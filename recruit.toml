@@ -1,0 +1,9 @@
+[[tasks]]
+type = "Recruit"
+
+[tasks.params]
+refresh = true
+select = [4, 5]
+confirm = [3, 4, 5]
+times = 3
+recruitment_time = { 3 = 460 }
